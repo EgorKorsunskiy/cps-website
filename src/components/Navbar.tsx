@@ -1,6 +1,7 @@
 'use client'
 
 import { Code2, Calendar, ListChecks, MessageSquare } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -11,7 +12,6 @@ export function Navbar() {
     { path: '/', label: 'Home', icon: Code2 },
     { path: '/schedule', label: 'Schedule', icon: Calendar },
     { path: '/tasks', label: 'Tasks', icon: ListChecks },
-    { path: '/forum', label: 'Forum', icon: MessageSquare },
   ];
 
   return (
@@ -19,8 +19,8 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 text-slate-100">
-            <Code2 className="w-8 h-8 text-blue-500" />
-            <span className="text-xl">CompSci Society</span>
+            <Image src='/logo.png' alt='logo' width={88} height={16} />
+            <span className="text-xl">KUL CP Society</span>
           </Link>
           
           <div className="flex gap-1">
